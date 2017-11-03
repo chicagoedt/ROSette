@@ -39,11 +39,11 @@ public class Panel : MonoBehaviour {
 		//TODO: Logic to update panel UI
 	}
 
-    class block{
+    class Block{
         int blockID;
         object value;
 
-        void Block(int id){
+        public Block(int id){
             this.blockID = id;
         }
 
