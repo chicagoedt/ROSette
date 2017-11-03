@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using UnityEditor;
 
-public class Panel : MonoBehaviour {
+public class Panel {
 
     //Will contain all of the blocks in this panel, in order
     ArrayList blocks;
-    
-	void Start () {
+
+    public Panel(){
         blocks = new ArrayList();
-	}
+
+    }
 
     //To add a block to this panel
     void insertBlock(Block block){
@@ -34,10 +36,6 @@ public class Panel : MonoBehaviour {
             UnityEngine.Debug.Log(e.StackTrace);
         }
     }
-
-    void Update () {
-		//TODO: Logic to update panel UI
-	}
 
     class Block{
         int blockID;
