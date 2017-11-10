@@ -20,8 +20,12 @@ public class Panel {
         return name;
     }
 
+    public ArrayList getBlocks(){
+        return blocks;
+    }
+
     //To add a block to this panel
-    void insertBlock(Block block){
+    public void insertBlock(Block block){
         blocks.Add(block);
     }
 
@@ -41,22 +45,5 @@ public class Panel {
         catch (System.IndexOutOfRangeException e){
             UnityEngine.Debug.Log(e.StackTrace);
         }
-    }
-
-    class Block{
-        int blockID;
-        object value;
-
-        public Block(int id){
-            this.blockID = id;
-        }
-
-        void setValue(object val){
-            this.value = val;
-        }
-
-        object getValue(){
-            return value;
-        }
-    }
+    }    
 }
