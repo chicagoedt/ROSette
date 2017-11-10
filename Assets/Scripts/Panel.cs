@@ -7,11 +7,17 @@ using UnityEditor;
 public class Panel {
 
     //Will contain all of the blocks in this panel, in order
-    ArrayList blocks;
+    private ArrayList blocks;
 
-    public Panel(){
+    private string name;
+
+    public Panel(string panelName){
         blocks = new ArrayList();
+        this.name = panelName;
+    }
 
+    string getName(){
+        return name;
     }
 
     //To add a block to this panel
