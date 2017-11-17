@@ -5,18 +5,16 @@ using UnityEngine;
 using UnityEditor;
 
 
-
-[InitializeOnLoad]
 public class PanelManager {
     Dictionary<string, Panel> panels;
 
-    static PanelManager(){
-        Panel panel = new Panel("first panel");
-        panel.insertBlock(new Block(1));
+    public PanelManager() {
+
     }
 
     void addPanel(string name){
         panels.Add(name, new Panel(name));
+
     }
 
     void runPanel(string name){
